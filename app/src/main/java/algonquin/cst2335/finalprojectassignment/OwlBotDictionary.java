@@ -1,8 +1,10 @@
 package algonquin.cst2335.finalprojectassignment;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,5 +41,23 @@ public class OwlBotDictionary extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed(){
+        myAlert(OwlBotDictionary.this);
+    }
+
+    public void myAlert(Context c){
+        new AlertDialog.Builder(c)
+            .setTitle("Exit")
+            .setMessage("Do you want to leave OwlBot Dictionary")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        System.exit(0);
+                    }
+                })
+            .setNegativeButton("No", null)
+                .show();
     }
 }
