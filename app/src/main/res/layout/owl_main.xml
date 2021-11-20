@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OwlBotDictionary"
-    android:background="@drawable/owl">
+    android:background="@drawable/owl"
+    android:id="@+id/snackbarlayout">
 
     <EditText
         android:id="@+id/editText"
