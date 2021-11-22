@@ -1,29 +1,15 @@
 package algonquin.cst2335.finalprojectassignment;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,15 +21,61 @@ public class MainActivity extends AppCompatActivity {
         ImageButton btnCovid = findViewById(R.id.imageButton8);
         ImageButton btnOwl = findViewById(R.id.imageButton9);
         ImageButton btnCo2 = findViewById(R.id.imageButton);
-        btnPexels.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar snackbar = Snackbar
-                        .make(findViewById(R.id.rootlayout), "Welcome to Pexels", Snackbar.LENGTH_LONG);
 
-                snackbar.show();
-            }
+        Snackbar snackbar = Snackbar
+                .make(findViewById(R.id.rootlayout), "Welcome to Final Project", Snackbar.LENGTH_LONG);
+
+        snackbar.show();
+
+        btnPexels.setOnClickListener(click -> {
+            Context context = getApplicationContext();
+            CharSequence text = "Welcome to Pexels ";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         });
+
+        btnOwl.setOnClickListener( (click) ->{
+            Context context = getApplicationContext();
+            CharSequence text = "Welcome to OwlBot Dictionary";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+                startActivity( new Intent(MainActivity.this, OwlBotActivity.class));
+        });
+
+        btnCovid.setOnClickListener(click ->{
+            Context context = getApplicationContext();
+            CharSequence text = "Welcome to Covid-19 Information Tracker";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        });
+
+        btnCo2.setOnClickListener(click->{
+            Context context = getApplicationContext();
+            CharSequence text = "Welcome to Carbone Dioxide Interface";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        });
+    }
+    @Override
+    public void onBackPressed(){
+        myAlert(MainActivity.this);
+    }
+
+    public void myAlert(Context c){
+        new AlertDialog.Builder(c)
+                .setTitle("Exit")
+                .setMessage("Do you want to leave Final Project?")
+                .setPositiveButton("Yes", (dialogInterface, i) -> System.exit(0))
+                .setNegativeButton("No", null)
+                .show();
     }
 
     }
