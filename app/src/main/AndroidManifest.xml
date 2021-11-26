@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".OwlBotActivity" android:exported="false"/>
+        <activity android:name=".PexelsActivity" android:exported="false"/>
     </application>
 
 </manifest>
