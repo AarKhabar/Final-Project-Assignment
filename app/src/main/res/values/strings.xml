@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Final Project Assignment</string>
+    <string name="COVPageTitle">Covid-19 Tracker</string>
+    <string name="DateFormat">Enter a date in YYYY-MM-DD format</string>
+    <string name="BtnSearch">Search</string>
 </resources>
