@@ -18,7 +18,7 @@
         android:layout_height="match_parent">
 
         <include
-            layout="@layout/activity_main"
+            layout="@layout/activity_covid"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -30,7 +30,7 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
 
-            app:headerLayout="@layout/neader_main_activity"
+            app:headerLayout="@layout/header_covid_activity"
             app:menu="@menu/main_navigation" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
