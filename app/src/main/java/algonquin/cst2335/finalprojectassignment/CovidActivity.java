@@ -1,16 +1,30 @@
 package algonquin.cst2335.finalprojectassignment;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -18,6 +32,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -34,6 +49,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.regex.Pattern;
@@ -56,14 +72,37 @@ public class CovidActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.covid_main);
+        setContentView(R.layout.nav_activity_main);
 
 
         dateInput = findViewById(R.id.COVeditText);
         searchBtn = findViewById(R.id.COVbutton);
         dateList = findViewById(R.id.COVmyrecycler);
 
+        Toolbar myToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
 
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        Toast.makeText(CovidActivity.this, "Hello", Toast.LENGTH_SHORT).show();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, myToolbar, R.string.open, R.string.close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.popout_menu);
+        navigationView.setNavigationItemSelectedListener((item) -> {
+            switch (item.getItemId()) {
+
+                case R.id.help:
+                    new AlertDialog.Builder((CovidActivity.this)).setMessage(getString(R.string.HelpMessage))
+                            .setTitle(getString(R.string.HelpTitle))
+                            .setNeutralButton(getString(R.string.close), (dialog, cl) -> dialog.cancel())
+                            .create().show();
+                    drawer.closeDrawer(GravityCompat.START);
+                    break;
+            }
+            return false;
+        });
 
 
         //SHARED PREFERENCES
@@ -94,7 +133,27 @@ public class CovidActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_navigation, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        AlertDialog.Builder builder = new AlertDialog.Builder((CovidActivity.this));
+        switch (item.getItemId()) {
+           //TODO - Add your group app items here
+            case R.id.help:
+                builder.setMessage(getString(R.string.HelpMessage))
+                        .setTitle(getString(R.string.HelpTitle))
+                        .setNeutralButton(getString(R.string.close), (dialog, cl) -> dialog.cancel())
+                        .create().show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     boolean checkNotValidDate(String date) {
         boolean isNotValid = false;
