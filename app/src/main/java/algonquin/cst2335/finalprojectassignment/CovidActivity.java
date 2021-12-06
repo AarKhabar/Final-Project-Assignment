@@ -65,7 +65,9 @@ public class CovidActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.nav_covid_activity);
+
 
 
         dateInput = findViewById(R.id.COVeditText);
