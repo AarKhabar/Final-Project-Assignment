@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CovidCaseDetailFragment">
+    <LinearLayout
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/DateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Data:"
+            android:layout_weight="1"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/FavBtn"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite_unselected"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Total Cases:" />
+
+        <TextView
+            android:id="@+id/TotalCasesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cases" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Fatalities:" />
+
+        <TextView
+            android:id="@+id/FatalitiesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fatalities" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Hospitalizations:" />
+
+        <TextView
+            android:id="@+id/HospitalizationsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospitalizations" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Vaccinations:" />
+
+        <TextView
+            android:id="@+id/VaccinationsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vaccinations" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Recoveries:" />
+
+        <TextView
+            android:id="@+id/RecoveriesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recoveries" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/MySavedBtn"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textColor="#6930CD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favourites List"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

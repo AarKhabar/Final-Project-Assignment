@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Final Project Assignment</string>
+    <string name="COVPageTitle">Covid-19 Tracker</string>
+    <string name="DateFormat">Enter a date in YYYY-MM-DD format</string>
+    <string name="BtnSearch">Search</string>
+    <string name="HelpTitle">How to use Covid Tracker App</string>
+    <string name="close">close</string>
+    <string name="HelpMessage">Use your brain</string>
+    <string name="open">open</string>
+    <string name="header">Covid 19 information tracker, Mohamed Sadek, Version 1</string>
 </resources>
