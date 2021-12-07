@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            startActivity( new Intent(MainActivity.this, CovidActivity.class));
         });
 
         btnCo2.setOnClickListener(click->{
