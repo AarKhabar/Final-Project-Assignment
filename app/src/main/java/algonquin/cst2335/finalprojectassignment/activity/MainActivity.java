@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         View headerLayout = navigationView.inflateHeaderView(R.layout.layout_header);
         TextView tvAuthor = headerLayout.findViewById(R.id.tv_author);
         TextView tvVersion = headerLayout.findViewById(R.id.tv_version);
-        tvAuthor.setText(getString(R.string.app_name));
+        tvAuthor.setText("");
         tvVersion.setText(BuildConfig.VERSION_NAME);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     public void showAlertDialog() {
         new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Instructions")
-                .setMessage("how to use the interface.")
+                .setMessage("here you")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
