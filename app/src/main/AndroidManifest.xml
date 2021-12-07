@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectAssignment">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OwlBotActivity" android:exported="false"/>
-        <activity android:name=".PexelsActivity" android:exported="false"/>
     </application>
 
 </manifest>
