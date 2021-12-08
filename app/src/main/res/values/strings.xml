@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Final Project Assignment</string>
+    <string name="navOpen">Open</string>
+    <string name="navClose">Close</string>
+    <string name="type">Type: %1$s</string>
+    <string name="definition">Definition: %1$s</string>
+    <string name="example">Example: %1$s</string>
 </resources>
