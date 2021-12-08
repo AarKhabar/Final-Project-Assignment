@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Final Project Assignment</string>
     <string name="navOpen">Open</string>
     <string name="navClose">Close</string>
     <string name="type">Type: %1$s</string>
-    <string name="definition">Definition: %1$s</string>
+    <string name="definition">Definition:%1$s</string>
     <string name="example">Example: %1$s</string>
     <string name="COVPageTitle">Covid-19 Tracker</string>
     <string name="DateFormat">Enter a date in YYYY-MM-DD format</string>
     <string name="BtnSearch">Search</string>
-    <string name="HelpTitle">How to use Covid Tracker App</string>
+    <string name="HelpTitle">How to use Covid Tracker</string>
     <string name="close">close</string>
     <string name="HelpMessage">Start off by typing a date in the search bar below with the following YYYY-MM-DD format, you will then get provided with a returned list of covid cases after the given date. You can then view the information and click the "Heart" shaped button to save info to the favourites list, to remove a date from the favourites list you will then have to click on the red "Heart" shape again to automatically remove the following date. The navigation pane will give you a few options to either go to the following listed apps and or get the information on how to use my covid-19 app. </string>
     <string name="open">open</string>
