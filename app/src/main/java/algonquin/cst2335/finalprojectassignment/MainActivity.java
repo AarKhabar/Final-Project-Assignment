@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import algonquin.cst2335.finalprojectassignment.activity.PexelActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,10 +31,9 @@ public class MainActivity extends AppCompatActivity {
             Context context = getApplicationContext();
             CharSequence text = "Welcome to Pexels ";
             int duration = Toast.LENGTH_SHORT;
-
+            startActivity( new Intent(MainActivity.this, PexelActivity.class));
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            startActivity( new Intent(MainActivity.this, PexelActivity.class));
         });
 
         btnOwl.setOnClickListener( (click) ->{
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-                startActivity( new Intent(MainActivity.this, OwlBotActivity.class));
+            startActivity( new Intent(MainActivity.this, OwlBotActivity.class));
         });
 
         btnCovid.setOnClickListener(click ->{
@@ -56,18 +53,30 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            startActivity( new Intent(MainActivity.this, CovidActivity.class));
         });
 
         btnCo2.setOnClickListener(click->{
             Context context = getApplicationContext();
             CharSequence text = "Welcome to Carbone Dioxide Interface";
             int duration = Toast.LENGTH_SHORT;
-            startActivity( new Intent(MainActivity.this, CarbonActivity.class));
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            startActivity( new Intent(MainActivity.this, CarbonActivity.class));
         });
+    }
+    @Override
+    public void onBackPressed(){
+        myAlert(MainActivity.this);
+    }
+
+    public void myAlert(Context c){
+        new AlertDialog.Builder(c)
+                .setTitle("Exit")
+                .setMessage("Do you want to leave Final Project?")
+                .setPositiveButton("Yes", (dialogInterface, i) -> System.exit(0))
+                .setNegativeButton("No", null)
+                .show();
     }
     @Override
     public void onBackPressed(){
