@@ -11,12 +11,14 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import algonquin.cst2335.finalprojectassignment.activity.PexelActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pexel_activity);
         ImageButton btnPexels = findViewById(R.id.imageButton7);
         ImageButton btnCovid = findViewById(R.id.imageButton8);
         ImageButton btnOwl = findViewById(R.id.imageButton9);
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            startActivity( new Intent(MainActivity.this, PexelsActivity.class));
+            startActivity( new Intent(MainActivity.this, PexelActivity.class));
         });
 
         btnOwl.setOnClickListener( (click) ->{

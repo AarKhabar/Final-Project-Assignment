@@ -23,7 +23,7 @@
             android:name=".CarbonActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.PexelActivity"
             android:exported="true"/>
 
         <activity

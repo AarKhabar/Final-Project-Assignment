@@ -9,28 +9,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
 import algonquin.cst2335.finalprojectassignment.BuildConfig;
 import algonquin.cst2335.finalprojectassignment.fragment.HomeFragment;
-import algonquin.cst2335.finalprojectassignment.util.PreferenceManager;
 import algonquin.cst2335.finalprojectassignment.R;
-import algonquin.cst2335.finalprojectassignment.adapter.PreviousAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class PexelActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -39,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pexel_activity);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -64,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                         drawerLayout.closeDrawer(GravityCompat.START);
                     }
-                    Intent intent = new Intent(MainActivity.this,FavouriteActivity.class);
+                    Intent intent = new Intent(PexelActivity.this,FavouriteActivity.class);
                     startActivity(intent);
                 }else if (item.getItemId() == R.id.nav_how) {
                     showAlertDialog();
@@ -105,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showAlertDialog() {
-        new AlertDialog.Builder(MainActivity.this)
+        new AlertDialog.Builder(PexelActivity.this)
                 .setTitle("Instructions")
                 .setMessage("here you")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
