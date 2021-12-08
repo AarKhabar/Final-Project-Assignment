@@ -49,6 +49,8 @@ import java.util.concurrent.Executors;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import algonquin.cst2335.finalprojectassignment.activity.PexelActivity;
+
 public class CovidActivity extends AppCompatActivity {
 
     EditText dateInput;
@@ -66,6 +68,7 @@ public class CovidActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_FinalProjectAssignment2);
 
         setContentView(R.layout.nav_covid_activity);
 
@@ -98,7 +101,7 @@ public class CovidActivity extends AppCompatActivity {
                     break;
 
                         case R.id.owlbot:
-                            Intent nextPage = new Intent(CovidActivity.this, OwlbotActivity.class);
+                            Intent nextPage = new Intent(CovidActivity.this, OwlBotActivity.class);
                             startActivity(nextPage);
                             break;
 
@@ -164,7 +167,7 @@ public class CovidActivity extends AppCompatActivity {
                         .create().show();
                 break;
             case R.id.owlbot:
-                Intent nextPage = new Intent(CovidActivity.this, OwlbotActivity.class);
+                Intent nextPage = new Intent(CovidActivity.this, OwlBotActivity.class);
                 startActivity(nextPage);
                 break;
 

@@ -10,7 +10,7 @@
     <string name="BtnSearch">Search</string>
     <string name="HelpTitle">How to use Covid Tracker App</string>
     <string name="close">close</string>
-    <string name="HelpMessage">Use your brain</string>
+    <string name="HelpMessage">Start off by typing a date in the search bar below with the following YYYY-MM-DD format, you will then get provided with a returned list of covid cases after the given date. You can then view the information and click the "Heart" shaped button to save info to the favourites list, to remove a date from the favourites list you will then have to click on the red "Heart" shape again to automatically remove the following date. The navigation pane will give you a few options to either go to the following listed apps and or get the information on how to use my covid-19 app. </string>
     <string name="open">open</string>
     <string name="header">Covid 19 information tracker, Mohamed Sadek, Version 1</string>
     <string name="Distance_button">Go!</string>
