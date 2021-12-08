@@ -22,6 +22,9 @@
         <activity
             android:name=".CarbonActivity"
             android:exported="true"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"/>
 
         <activity
             android:name=".MainActivity"
@@ -34,8 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OwlBotActivity" android:exported="false"/>
-        <activity android:name=".PexelsActivity" android:exported="false"/>
+        <activity android:name=".activity.FavouriteActivity"/>
     </application>
 
 </manifest>
