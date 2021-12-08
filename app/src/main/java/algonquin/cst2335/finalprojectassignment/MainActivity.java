@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             Context context = getApplicationContext();
             CharSequence text = "Welcome to Carbone Dioxide Interface";
             int duration = Toast.LENGTH_SHORT;
+            startActivity( new Intent(MainActivity.this, CarbonActivity.class));
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
