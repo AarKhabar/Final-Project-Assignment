@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pexel_activity);
+        setContentView(R.layout.activity_main);
         ImageButton btnPexels = findViewById(R.id.imageButton7);
         ImageButton btnCovid = findViewById(R.id.imageButton8);
         ImageButton btnOwl = findViewById(R.id.imageButton9);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             Context context = getApplicationContext();
             CharSequence text = "Welcome to Pexels ";
             int duration = Toast.LENGTH_SHORT;
-            startActivity( new Intent(MainActivity.this, PexelActivity.class));
+
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         });
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            startActivity( new Intent(MainActivity.this, CarbonActivity.class));
         });
     }
     @Override
@@ -78,20 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 .setNegativeButton("No", null)
                 .show();
     }
-    @Override
-    public void onBackPressed(){
-        myAlert(MainActivity.this);
-    }
 
-    public void myAlert(Context c){
-        new AlertDialog.Builder(c)
-                .setTitle("Exit")
-                .setMessage("Do you want to leave Final Project?")
-                .setPositiveButton("Yes", (dialogInterface, i) -> System.exit(0))
-                .setNegativeButton("No", null)
-                .show();
-    }
-
-    }
+}
 
 
