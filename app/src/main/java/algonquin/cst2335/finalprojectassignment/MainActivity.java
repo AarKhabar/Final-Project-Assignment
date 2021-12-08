@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import algonquin.cst2335.finalprojectassignment.activity.PexelActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            startActivity( new Intent(MainActivity.this, PexelsActivity.class));
+            startActivity( new Intent(MainActivity.this, PexelActivity.class));
         });
 
         btnOwl.setOnClickListener( (click) ->{
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-                startActivity( new Intent(MainActivity.this, OwlBotActivity.class));
+            startActivity( new Intent(MainActivity.this, OwlBotActivity.class));
         });
 
         btnCovid.setOnClickListener(click ->{
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            startActivity( new Intent(MainActivity.this, CovidActivity.class));
         });
 
         btnCo2.setOnClickListener(click->{
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            startActivity( new Intent(MainActivity.this, CarbonActivity.class));
         });
     }
     @Override
@@ -79,6 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    }
+}
 
 
