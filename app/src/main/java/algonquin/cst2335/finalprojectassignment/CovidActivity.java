@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -95,7 +96,23 @@ public class CovidActivity extends AppCompatActivity {
                             .create().show();
                     drawer.closeDrawer(GravityCompat.START);
                     break;
-            }
+
+                        case R.id.owlbot:
+                            Intent nextPage = new Intent(CovidActivity.this, OwlbotActivity.class);
+                            startActivity(nextPage);
+                            break;
+
+                        case R.id.pexles:
+                            Intent nextPage1 = new Intent(CovidActivity.this, PexelActivity.class);
+                            startActivity(nextPage1);
+                            break;
+
+                        case R.id.C02image:
+                            Intent nextPage2 = new Intent(CovidActivity.this, CarbonActivity.class);
+                            startActivity(nextPage2);
+                            break;
+                    }
+
             return false;
         });
 
@@ -139,12 +156,26 @@ public class CovidActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder = new AlertDialog.Builder((CovidActivity.this));
         switch (item.getItemId()) {
-           //TODO - Add your group app items here
+
             case R.id.help:
                 builder.setMessage(getString(R.string.HelpMessage))
                         .setTitle(getString(R.string.HelpTitle))
                         .setNeutralButton(getString(R.string.close), (dialog, cl) -> dialog.cancel())
                         .create().show();
+                break;
+            case R.id.owlbot:
+                Intent nextPage = new Intent(CovidActivity.this, OwlbotActivity.class);
+                startActivity(nextPage);
+                break;
+
+            case R.id.pexles:
+                Intent nextPage1 = new Intent(CovidActivity.this, PexelActivity.class);
+                startActivity(nextPage1);
+                break;
+
+            case R.id.C02image:
+                Intent nextPage2 = new Intent(CovidActivity.this, CarbonActivity.class);
+                startActivity(nextPage2);
                 break;
         }
         return super.onOptionsItemSelected(item);

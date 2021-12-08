@@ -10,7 +10,7 @@
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/drawable/ic_tracker.xml" value="0.1175925925925926" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/activity_saved_cases.xml" value="0.16944444444444445" />
-        <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/covid_activity.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/covid_activity.xml" value="0.33" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/covid_dateview.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/covid_main.xml" value="0.3176470588235294" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/fragment_covid_case_detail.xml" value="0.16944444444444445" />
@@ -18,6 +18,7 @@
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/nav_activity_main.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/layout/nav_covid_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/menu/help_toolbar_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/menu/main_navigation.xml" value="0.1" />
         <entry key="..\:/Users/m-sad/AndroidStudioProjects/Final-Project-Assignment/app/src/main/res/menu/main_navigation.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/jamal/jamal/app/src/main/res/layout/activity_favourite.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/jamal/jamal/app/src/main/res/layout/activity_main.xml" value="0.1" />
