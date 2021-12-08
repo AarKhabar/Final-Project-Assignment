@@ -10,4 +10,22 @@
         android:title="information"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/owlbot"
+        android:icon="@drawable/owlimage"
+        android:title="Owlbot"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/pexles"
+        android:icon="@drawable/pexlesimage"
+        android:title="Pexles"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/C02image"
+        android:icon="@drawable/carbonimage"
+        android:title="Carbon"
+        app:showAsAction="always" />
+
 </menu>
