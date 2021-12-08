@@ -5,4 +5,17 @@
     <string name="type">Type: %1$s</string>
     <string name="definition">Definition: %1$s</string>
     <string name="example">Example: %1$s</string>
+    <string name="COVPageTitle">Covid-19 Tracker</string>
+    <string name="DateFormat">Enter a date in YYYY-MM-DD format</string>
+    <string name="BtnSearch">Search</string>
+    <string name="HelpTitle">How to use Covid Tracker App</string>
+    <string name="close">close</string>
+    <string name="HelpMessage">Use your brain</string>
+    <string name="open">open</string>
+    <string name="header">Covid 19 information tracker, Mohamed Sadek, Version 1</string>
+    <string name="Distance_button">Go!</string>
+    <string name="model_button">Search</string>
+    <string name="app_name">Alka0064</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
